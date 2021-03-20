@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, border-style, #root {
+    max-height: 100vh;
+    max-width: 100vw;
+    width: 100%;
+    height: 100%;
+}
+
+*, button, input {
+    border: 0;
+    background: none;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+html {
+    background: var(--primary-background);
+}
+
+:root {
+    --gold: #B9A05C;
+    --black: #000;
+    --primary-background: #fcfcfc;
+    --secondary-background: rgb(22, 20, 20);
+    --icon-background: #e4e6eb;
+    --primary: #050505;
+    --secondary-text: #65676b;
+    --gray: #65676b;
+}
+
+@media(min-width: 1600px){
+    .container { max-width: 1456px!important }
+}
+
+@media (min-width: 1320px) and (max-width: 1600px) {
+    .container { max-width: 1248px!important }
+}
+
+@media (min-width: 900px) and (max-width: 1320px) {
+    .container { max-width: 948px!important }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px 20px 60px;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    width: 300px;
+}
+
+header .divider {
+    width: 3px;
+    height: 80px;
+    border-radius: 1.5px;
+    margin: 0 100px;
+
+    background-color: var(--gold);
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+main .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    max-width: 270px;
+    padding: 45px 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+
+    background-color: var(--black);
+}
+
+main .card img {
+    width: 60px;
+    height: 60px;
+}
+
+main .card-text {
+    color: var(--gold);
+    text-align: center;
+}
+
+main .card-text h4 {
+    margin: 40px 0 15px;
+}
+
+@media (max-width: 940px) {
+    header .divider { margin: 0 50px; }
+}
+
+@media (max-width: 840px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    header .divider {
+        width:  80px;
+        height: 3px;
+        border-radius: 1.5px;
+        margin: 30px 0;
+    }
+
+    main {
+        margin-top: 50px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    header img { width: 270px; }
+    header .divider { margin: 20px 0 15px; }
+    header h1 { font-size: 20px; }
+    main { 
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    main .card { width: 250px; }
+}
