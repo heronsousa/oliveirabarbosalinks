@@ -24,6 +24,7 @@ html {
 :root {
     --gold: #B9A05C;
     --black: #000;
+    --grafite: #101010;
     --primary-background: #fcfcfc;
     --secondary-background: rgb(22, 20, 20);
     --icon-background: #e4e6eb;
@@ -111,6 +112,10 @@ main a .icon {
 
 main a:hover .icon {
     padding-top: 0px;
+}
+
+main a:hover {
+    background-color: var(--grafite);
 }
 
 main a .icon img {
